@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
-
 import { Container } from '@/components/Container';
-
 
 export const LogoFooter = styled(Link)`
   display: block;
@@ -13,6 +10,16 @@ export const LogoFooter = styled(Link)`
   color: ${({ theme }) => theme.colorWhite};
   text-transform: uppercase;
   margin-bottom: 18px;
+  transform: scale();
+  transition:
+    transform 250ms ${({ theme }) => theme.cubicBezier},
+    color 250ms ${({ theme }) => theme.cubicBezier};
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: ${({ theme }) => theme.lightPurple};
+  }
 `;
 
 export const WrapperFooter = styled.footer`
@@ -37,9 +44,14 @@ export const Icon = styled.svg`
   fill: ${({ theme }) => theme.colorWhite};
   width: 32px;
   height: 32px;
-  transition: fill 250ms ${({ theme }) => theme.cubicBezier};
+  transform: scale();
+  transition:
+    transform 250ms ${({ theme }) => theme.cubicBezier},
+    fill 250ms ${({ theme }) => theme.cubicBezier};
+
   &:hover,
   &:focus {
+    transform: scale(1.1);
     fill: ${({ theme }) => theme.lightPurple};
   }
 `;
@@ -64,14 +76,39 @@ export const ContactWrapper = styled.div`
   flex-wrap: wrap;
   gap: 51px;
   margin-bottom: 87px;
-  color: ${({ theme }) => theme.colorWhite};
-  font-family: 'Roboto Flex';
-  font-weight: 500;
+
+  & a {
+    color: ${({ theme }) => theme.colorWhite};
+    font-weight: 500;
+    transform: scale();
+    transition:
+      transform 250ms ${({ theme }) => theme.cubicBezier},
+      color 250ms ${({ theme }) => theme.cubicBezier};
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      color: ${({ theme }) => theme.lightPurple};
+    }
+  }
 `;
 
 export const LinkFooter = styled(Link)`
   color: ${({ theme }) => theme.colorWhite};
   font-weight: 500;
   display: block;
-  margin-bottom: 41px;
+  transform: scale();
+  transition:
+    transform 250ms ${({ theme }) => theme.cubicBezier},
+    color 250ms ${({ theme }) => theme.cubicBezier};
+
+  &:not(:last-child) {
+    margin-bottom: 41px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: ${({ theme }) => theme.lightPurple};
+  }
 `;
