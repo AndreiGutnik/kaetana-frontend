@@ -9,8 +9,7 @@ export const lightTheme = {
   colorBlack: '#242424',
   colorGray: '#969696',
   colorRed: '#2445B8',
-  colorWhite:'#FFFFFF',
-
+  colorWhite: '#FFFFFF',
 
   //hover-focus
   lightPurple: '#E2EFFF',
@@ -20,4 +19,7 @@ export const lightTheme = {
 
   //shadow
   boxShadow: '0px 3px 26px 0px rgba(0, 0, 0, 0.07)',
+
+  //pseudo element
+  colorPseudo: '#DEDEDE',
 };
