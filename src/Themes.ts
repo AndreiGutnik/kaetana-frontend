@@ -9,6 +9,8 @@ export const lightTheme = {
   colorBlack: '#242424',
   colorGray: '#969696',
   colorRed: '#2445B8',
+  colorWhite:'#FFFFFF',
+
 
   //hover-focus
   lightPurple: '#E2EFFF',

@@ -1,7 +1,10 @@
 import 'modern-normalize';
 import { createGlobalStyle } from 'styled-components';
 
+
+
 import RobotoFlex from './assets/fonts/RobotoFlex.ttf';
+
 
 export const GlobalStyle = createGlobalStyle`
 	@font-face{
@@ -21,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 		font-size: 18px;
 		line-height: normal;
 		letter-spacing: normal;
+		font-style: normal;
 		margin: 0;
 		background-color: ${({ theme }) => theme.backgroundWhite};
 		color: ${({ theme }) => theme.colorBlack};
