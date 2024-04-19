@@ -21,7 +21,7 @@ export default defineConfig(({ command }) => {
     base: '/',
   };
   if (command !== 'serve') {
-    config.base = '/booking-system-frontend/';
+    config.base = '/kaetana-frontend/';
   }
   return config;
 });
