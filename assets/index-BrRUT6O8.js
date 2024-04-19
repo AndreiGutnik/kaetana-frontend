@@ -137,7 +137,7 @@ Error generating stack: `+o.message+`
   width: 1200px;
   padding: 0 24px;
   margin: 0 auto;
-`,D0=()=>ce.jsx(ce.Fragment,{children:ce.jsx(j0,{children:ce.jsx(R.Suspense,{fallback:null,children:ce.jsx(kv,{})})})}),M0=R.lazy(()=>Tv(()=>import("./MainPage-rtpw55Y1.js"),__vite__mapDeps([]))),A0=()=>ce.jsxs(R0,{theme:I0,children:[ce.jsx(xv,{children:ce.jsx(uu,{path:F0.HOME,element:ce.jsx(D0,{}),children:ce.jsx(uu,{index:!0,element:ce.jsx(M0,{})})})}),ce.jsx(L0,{})]});fi.createRoot(document.getElementById("root")).render(ce.jsx(oe.StrictMode,{children:ce.jsx(Pv,{basename:"/booking-system-frontend/",children:ce.jsx(Dm,{children:ce.jsx(A0,{})})})}));export{ce as j};
+`,D0=()=>ce.jsx(ce.Fragment,{children:ce.jsx(j0,{children:ce.jsx(R.Suspense,{fallback:null,children:ce.jsx(kv,{})})})}),M0=R.lazy(()=>Tv(()=>import("./MainPage-UiTVEcuK.js"),__vite__mapDeps([]))),A0=()=>ce.jsxs(R0,{theme:I0,children:[ce.jsx(xv,{children:ce.jsx(uu,{path:F0.HOME,element:ce.jsx(D0,{}),children:ce.jsx(uu,{index:!0,element:ce.jsx(M0,{})})})}),ce.jsx(L0,{})]});fi.createRoot(document.getElementById("root")).render(ce.jsx(oe.StrictMode,{children:ce.jsx(Pv,{basename:"/kaetana-frontend/",children:ce.jsx(Dm,{children:ce.jsx(A0,{})})})}));export{ce as j};
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
     __vite__mapDeps.viteFileDeps = []
