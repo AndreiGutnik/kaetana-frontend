@@ -8,6 +8,7 @@ export const lightTheme = {
   //text color
   colorBlack: '#242424',
   colorGray: '#969696',
+  colorDarkGray: '#474747',
   colorRed: '#2445B8',
   colorWhite: '#FFFFFF',
 
