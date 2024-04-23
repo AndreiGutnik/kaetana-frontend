@@ -1,10 +1,7 @@
 import 'modern-normalize';
 import { createGlobalStyle } from 'styled-components';
 
-
-
 import RobotoFlex from './assets/fonts/RobotoFlex.ttf';
-
 
 export const GlobalStyle = createGlobalStyle`
 	@font-face{
@@ -25,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 		line-height: normal;
 		letter-spacing: normal;
 		font-style: normal;
+		font-weight: 400;
 		margin: 0;
 		background-color: ${({ theme }) => theme.backgroundWhite};
 		color: ${({ theme }) => theme.colorBlack};
@@ -55,7 +53,6 @@ export const GlobalStyle = createGlobalStyle`
 
 	img {
 		display: block;
-		max-width: 100%;
 		height: auto;
 	}
 
@@ -66,7 +63,9 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	button {
-  cursor: pointer;
+		border: none;
+		background-color: transparent;
+  	cursor: pointer;
 		padding: 0;
 	}
 
