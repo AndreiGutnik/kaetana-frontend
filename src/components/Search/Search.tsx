@@ -2,10 +2,12 @@ import { useState } from 'react';
 
 import iconsSprite from '../../assets/iconsSprite.svg';
 
-import { Button, Form, Icon, Input } from './Search.styled';
+import { Form, Icon, Input } from './Search.styled';
+import useDevice from '@/hooks/useDevice';
 
 export const Search = () => {
   const [search, setSearch] = useState<string>('');
+  const { isMobile } = useDevice();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,18 +25,20 @@ export const Search = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Button type="submit">
+      <button type="submit">
         <Icon>
           <use href={iconsSprite + '#search'}></use>
         </Icon>
-      </Button>
-      <Input
-        type="text"
-        name="search"
-        placeholder="Поиск"
-        value={search}
-        onChange={onChangeInput}
-      />
+      </button>
+      {!isMobile && (
+        <Input
+          type="text"
+          name="search"
+          placeholder="Поиск"
+          value={search}
+          onChange={onChangeInput}
+        />
+      )}
     </Form>
   );
 };

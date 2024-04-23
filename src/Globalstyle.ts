@@ -53,7 +53,6 @@ export const GlobalStyle = createGlobalStyle`
 
 	img {
 		display: block;
-		max-width: 100%;
 		height: auto;
 	}
 
@@ -64,7 +63,9 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	button {
-  cursor: pointer;
+		border: none;
+		background-color: transparent;
+  	cursor: pointer;
 		padding: 0;
 	}
 

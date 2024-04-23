@@ -6,21 +6,24 @@ export const Form = styled.form`
   gap: 24px;
 `;
 
-export const Button = styled.button`
-  border: none;
-  background-color: transparent;
-`;
-
 export const Icon = styled.svg`
-  width: 28px;
-  height: 28px;
-  fill: ${({ theme }) => theme.colorGray};
+  width: 20px;
+  height: 20px;
+  fill: ${({ theme }) => theme.colorBlack};
+
+  @media screen and (min-width: 1648px) {
+    width: 28px;
+    height: 28px;
+    fill: ${({ theme }) => theme.colorGray};
+  }
 `;
 
 export const Input = styled.input`
-  width: 164px;
-  border: none;
-  border-bottom: 1.2px solid ${({ theme }) => theme.colorDarkGray};
+  @media screen and (min-width: 1648px) {
+    width: 164px;
+    border: none;
+    border-bottom: 1.2px solid ${({ theme }) => theme.colorDarkGray};
+  }
 
   &::placeholder {
     color: ${({ theme }) => theme.colorGray};

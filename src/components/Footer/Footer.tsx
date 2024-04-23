@@ -1,5 +1,3 @@
-import iconsSprite from '../assets/iconsSprite.svg';
-
 import {
   ContactWrapper,
   FlexNav,
@@ -15,6 +13,7 @@ import {
   WrapBottomMenu,
   WrapperFooter,
 } from './Footer.styled';
+import iconsSprite from '@/assets/iconsSprite.svg';
 import { routes } from '@/routes';
 
 export const Footer = () => {
@@ -69,10 +68,10 @@ export const Footer = () => {
             <div>
               <TextTitle>Навігація по сайту</TextTitle>
               <FlexWrapNav>
-                <LinkFooter to={routes.PRODUCTS}>Продукція</LinkFooter>
+                <LinkFooter to={routes.CATALOGY}>Продукція</LinkFooter>
                 <LinkFooter to={routes.CONTACT}>Контакти</LinkFooter>
                 <LinkFooter to={routes.DELIVERY}>Доставка</LinkFooter>
-                <LinkFooter to={routes.DELIVERY}>Корзина</LinkFooter>
+                <LinkFooter to={routes.PROFILE}>Корзина</LinkFooter>
               </FlexWrapNav>
             </div>
           </FlexNav>
@@ -84,15 +83,15 @@ export const Footer = () => {
             href="https://www.facebook.com/"
           >
             Політика конфіденційності
-                  </a>
-                  <a
+          </a>
+          <a
             target="_blank"
             rel="noopener noreferrer nofollow"
             href="https://www.facebook.com/"
           >
             Договір оферти
-                  </a>
-                  <a
+          </a>
+          <a
             target="_blank"
             rel="noopener noreferrer nofollow"
             href="https://www.facebook.com/"
