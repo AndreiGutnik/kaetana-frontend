@@ -9,7 +9,7 @@ export const lightTheme = {
   colorBlack: '#242424',
   colorGray: '#969696',
   colorDarkGray: '#474747',
-  colorRed: '#2445B8',
+  colorRed: '#FF4141',
   colorWhite: '#FFFFFF',
 
   //hover-focus

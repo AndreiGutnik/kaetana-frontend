@@ -9,11 +9,13 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <Container>
-        <Suspense fallback={null}>
-          <Outlet />
-        </Suspense>
-      </Container>
+      <main>
+        <Container>
+          <Suspense fallback={null}>
+            <Outlet />
+          </Suspense>
+        </Container>
+      </main>
       <Footer />
     </>
   );
