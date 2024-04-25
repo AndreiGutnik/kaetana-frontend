@@ -7,9 +7,11 @@ import { lightTheme } from '../Themes';
 import { routes } from '../routes';
 
 import { Layout } from './Layout';
-import Profile from '@/pages/Profile';
 
-const MainPage = lazy(() => import('../pages/MainPage'));
+const MainPage = lazy(() => import('@/pages/MainPage'));
+const Contacts = lazy(() => import('@/pages/Contacts/Contacts'));
+const Delivery = lazy(() => import('@/pages/Delivery/Delivery'));
+const Profile = lazy(() => import('@/pages/Profile/Profile'));
 
 export const App = () => {
   return (
@@ -29,11 +31,11 @@ export const App = () => {
           />
           <Route
             path={routes.CONTACT}
-            element={<p>Contact</p>}
+            element={<Contacts />}
           />
           <Route
             path={routes.DELIVERY}
-            element={<p>Delivery</p>}
+            element={<Delivery />}
           />
           <Route
             path={routes.PROFILE}
