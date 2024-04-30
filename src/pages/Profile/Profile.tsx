@@ -10,7 +10,6 @@ import {
   ProfileWrap,
   Title,
 } from './Profile.styled';
-import { Favorites } from '@/components/Favorites/Favorites';
 import { History } from '@/components/History/History';
 import { ProfileForm } from '@/components/ProfileForm/ProfileForm';
 
@@ -23,11 +22,7 @@ export default function Profile({}: ProfileProps) {
     setProfile('profile');
   };
 
-  const onFavorites = () => {
-    setProfile('favorites');
-  };
-
-  const onCart = () => {
+  const onHistory = () => {
     setProfile('cart');
   };
 
@@ -45,26 +40,12 @@ export default function Profile({}: ProfileProps) {
             </Button>
             <Button
               type="button"
-              onClick={onFavorites}
-            >
-              Лайкнуті
-            </Button>
-            <Button
-              type="button"
-              onClick={onCart}
+              onClick={onHistory}
             >
               Мої замовлення
             </Button>
           </ButtonWrap>
-          <Content>
-            {profile === 'profile' ? (
-              <ProfileForm />
-            ) : profile === 'favorites' ? (
-              <Favorites />
-            ) : (
-              <History />
-            )}
-          </Content>
+          <Content>{profile === 'profile' ? <ProfileForm /> : <History />}</Content>
         </ContentWrap>
         <LogoutBtn type="button">Вийти з аккаунту</LogoutBtn>
       </ProfileWrap>

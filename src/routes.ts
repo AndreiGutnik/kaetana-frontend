@@ -6,4 +6,6 @@ export const routes = {
   LOGIN: '/login',
   SIGNUP: '/signup',
   PROFILE: '/profile',
+  FAVORITES: '/favorites',
+  CART: '/cart',
 };

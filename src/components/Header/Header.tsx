@@ -26,12 +26,12 @@ export const Header = () => {
       <HeaderContainer>
         {!isMobile && (
           <IconWrap>
-            <Link to={routes.PROFILE}>
+            <Link to={routes.FAVORITES}>
               <Icon>
                 <use href={iconsSprite + '#heart'}></use>
               </Icon>
             </Link>
-            <Link to={routes.PROFILE}>
+            <Link to={routes.CART}>
               <Icon>
                 <use href={iconsSprite + '#cart'}></use>
               </Icon>

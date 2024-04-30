@@ -24,7 +24,7 @@ export const Title = styled.h1`
 export const ContentWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 `;
 
 export const ButtonWrap = styled.div`

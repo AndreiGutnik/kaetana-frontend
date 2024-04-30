@@ -8,10 +8,12 @@ import { routes } from '../routes';
 
 import { Layout } from './Layout';
 
-const MainPage = lazy(() => import('@/pages/MainPage'));
+const MainPage = lazy(() => import('@/pages/MainPage/MainPage'));
 const Contacts = lazy(() => import('@/pages/Contacts/Contacts'));
 const Delivery = lazy(() => import('@/pages/Delivery/Delivery'));
 const Profile = lazy(() => import('@/pages/Profile/Profile'));
+const Favorites = lazy(() => import('@/pages/Favorites/Favorites'));
+const Cart = lazy(() => import('@/pages/Cart/Cart'));
 
 export const App = () => {
   return (
@@ -24,6 +26,14 @@ export const App = () => {
           <Route
             index
             element={<MainPage />}
+          />
+          <Route
+            path={routes.FAVORITES}
+            element={<Favorites />}
+          />
+          <Route
+            path={routes.CART}
+            element={<Cart />}
           />
           <Route
             path={routes.CATALOGY}
