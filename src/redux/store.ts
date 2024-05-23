@@ -9,31 +9,34 @@ export const store = configureStore({
     auth: persistedAuthReducer,
     [userApi.reducerPath]: userApi.reducer,
   },
-  middleware: getDefaultMiddleware => [
-    ...getDefaultMiddleware({
+  // middleware (getDefaultMiddleware){
+  //   etDefaultMiddleware({
+  //     serializableCheck: {
+  //       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+  //     },
+  //   })
+  // }
+
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
-    userApi.middleware,
-  ],
+    }).concat(userApi.middleware),
+
+  // middleware: getDefaultMiddleware => [
+  // 	...getDefaultMiddleware(),
+  // 	userApi.middleware,
+  // ],
+
+  // middleware(getDefaultMiddleware) {
+  //   return getDefaultMiddleware({
+  //     serializableCheck: {
+  //       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+  //     }
+  //   });
+  // },
 });
-// 	middleware: (getDefaultMiddleware) =>
-// 		getDefaultMiddleware({
-// 			serializableCheck: {
-// 				ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-// 			},
-// 		}).concat(userApi.middleware)
-// });
-//middleware: getDefaultMiddleware => [...getDefaultMiddleware(), userApi.middleware],
-// middleware(getDefaultMiddleware) {
-//   return getDefaultMiddleware({
-//     serializableCheck: {
-//       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//     },
-//   });
-// },
-//});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
